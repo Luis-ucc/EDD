@@ -8,5 +8,14 @@ public class arreglos {
         for(int i = 0; i < a.length; i++) {
             System.out.println("a[" + i + "]=" + a[i]);
         }
+
+        int suma = 0;
+        for(int i = 0; i < a.length; i++) {
+            suma += a[i];
+        }
+
+        System.out.println("la suma de todos los elementos del arreglo [a] es: " + suma);
+
+
     }
 }
