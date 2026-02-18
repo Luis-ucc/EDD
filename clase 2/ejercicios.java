@@ -59,11 +59,11 @@ public class ejercicios {
         String[] desc = { "Lapiz", "Cuaderno", "Borrador", "Libro" };
         int l = PU.length;
 
-        double[] TG = new double[n];
+        double[] TG = new double[l];
         double totalGeneral = 0;
         int idxMayor = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < l; i++) {
             TG[i] = PU[i] * CC[i];
             totalGeneral += TG[i];
             if (TG[i] > TG[idxMayor])
@@ -71,7 +71,7 @@ public class ejercicios {
         }
 
         System.out.println("Total por producto:");
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < l; i++)
             System.out.printf("  %s: %.2f%n", desc[i], TG[i]);
         System.out.printf("Total general: %.2f%n", totalGeneral);
         System.out.printf("Mayor gasto => %s: %.2f%n", desc[idxMayor], TG[idxMayor]);
@@ -82,12 +82,12 @@ public class ejercicios {
         double[] alquileres = { 500, 750, 300, 1200 };
         double[] porcentajes = { 10, 15, 8, 20 };
         int f = alquileres.length;
-        double[] ganancias = new double[n];
+        double[] ganancias = new double[f];
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < f; i++)
             ganancias[i] = alquileres[i] * porcentajes[i] / 100.0;
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < f; i++)
             System.out.printf("  Vivienda %d: ganancia = %.2f%n", i + 1, ganancias[i]);
 
         // 7 ejercicio
