@@ -18,8 +18,7 @@ public class EjecutarMoto {
 
         for (int i = 0; i < m.length; i++) {
             suma += m[i].getModelo();
-        }
-
+        } 
         System.out.println("el promedio de los modelos de las motos del arreglo es: " + (suma / m.length));
 
         // presupuesto de 20000 dolares
@@ -29,7 +28,7 @@ public class EjecutarMoto {
                 cad += "-" + m[i].getMarca() + ": " + m[i].getPrecio() + " \n";
             }
         }
-        
+
         System.out.println("las motos que puedo comprar con 20.000.0 US son: " + cad);
 
     }
