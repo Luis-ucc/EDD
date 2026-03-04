@@ -27,7 +27,6 @@ public class Muelle {
         return buques;
     }
 
-    // ── BUQUES ────────────────────────────────────────────────────────────────
 
     public String registrarBuque(int id, String nombre, String procedencia, double pesoMaximo) {
         String cadena = "Muelle lleno. No se puede registrar mas buques.";
