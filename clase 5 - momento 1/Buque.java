@@ -2,13 +2,13 @@ public class Buque {
     private int id;
     private String nombre;
     private String procedencia;
-    private int capacidadContenedores;
+    private double pesoMaximo;
 
-    public Buque(int id, String nombre, String procedencia, int capacidadContenedores) {
+    public Buque(int id, String nombre, String procedencia, double pesoMaximo) {
         this.id = id;
         this.nombre = nombre;
         this.procedencia = procedencia;
-        this.capacidadContenedores = capacidadContenedores;
+        this.pesoMaximo = pesoMaximo;
     }
 
     public int getId() {
@@ -23,8 +23,8 @@ public class Buque {
         return procedencia;
     }
 
-    public int getCapacidadContenedores() {
-        return capacidadContenedores;
+    public double getPesoMaximo() {
+        return pesoMaximo;
     }
 
     public void setId(int id) {
@@ -39,13 +39,13 @@ public class Buque {
         this.procedencia = p;
     }
 
-    public void setCapacidadContenedores(int c) {
-        this.capacidadContenedores = c;
+    public void setPesoMaximo(double p) {
+        this.pesoMaximo = p;
     }
 
     @Override
     public String toString() {
-        return "Buque{id=" + id + ", nombre='" + nombre + "', procedencia='" + procedencia + "', capacidad="
-                + capacidadContenedores + "}";
+        return "Buque{id=" + id + ", nombre='" + nombre + "', procedencia='" + procedencia + "', pesoMaximo="
+                + pesoMaximo + "t}";
     }
 }

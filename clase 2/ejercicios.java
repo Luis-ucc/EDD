@@ -43,12 +43,12 @@ public class ejercicios {
         int[] z = { 23, 45, 12, 67 };
         int[] q = { 34, 89, 5, 22 };
         int mayor = z[0];
-        for (int x : z)
-            if (x > mayor)
-                mayor = x;
-        for (int x : q)
-            if (x > mayor)
-                mayor = x;
+        for (int n1 : z)
+            if (n1 > mayor)
+                mayor = n1;
+        for (int n2 : q)
+            if (n2 > mayor)
+                mayor = n2;
         System.out.println("Mayor edad: " + mayor);
 
         // 5 ejercicio
