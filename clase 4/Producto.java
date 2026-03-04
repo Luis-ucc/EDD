@@ -1,11 +1,11 @@
-public class producto {
-
+public class Producto {
+    
     private int id;
     private String nombre;
     private double precio;
     private int cantidadStock;
-
-    public producto(int id, String nombre, double precio, int cantidadStock) {
+    
+    public Producto(int id, String nombre, double precio, int cantidadStock) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -46,10 +46,8 @@ public class producto {
 
     @Override
     public String toString() {
-        return "producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", cantidadStock=" + cantidadStock
+        return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", cantidadStock=" + cantidadStock
                 + "]";
     }
-
     
-
 }
