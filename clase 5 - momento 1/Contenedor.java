@@ -37,4 +37,9 @@ public class Contenedor {
     public String toString() {
         return "Contenedor{id=" + id + ", origen='" + origen + "', peso=" + peso + "t}";
     }
+
+    public boolean requiereInspeccion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'requiereInspeccion'");
+    }
 }

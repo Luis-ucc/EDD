@@ -40,7 +40,7 @@ public class Manifiesto {
     }
 
     public boolean requiereInspeccion() {
-        return peligroso || prioridad == 1;
+        return peligroso || Prioridad == 1;
     }
 
     @Override

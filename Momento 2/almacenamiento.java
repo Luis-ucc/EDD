@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
@@ -29,7 +31,7 @@ class almacenamiento {
         double total = 0;
         System.out.println("Manifiesto ");
         for (int i = 0; i < capacidadManifiesto; i++) {
-            System.out.println(" [%d] %s%n", i, Manifiesto[i]);
+            System.out.printf(" [%d] %s%n", i, Manifiesto[i]);
             total += Manifiesto[i].getPeso();
         }
         System.out.println("Total: " + total + " toneladas");
@@ -45,14 +47,15 @@ class almacenamiento {
                 }
             }
         }
-    }throw new RuntimeException("No hay espacio en el patio para ubicar el contenedor: ");
+        throw new RuntimeException("No hay espacio en el patio para ubicar el contenedor: ");
+    }
 
     public void mostrarpatio() {
         System.out.println(" Almacenamiento en Patio:");
         for (int i = 0; i < Patio.length; i++) {
             System.out.println(" Fila " + i + ": ");
             for (int j = 0; j < Patio[i].length; j++) {
-                System.out.println("%-22s", Patio[i][j] == null ? "[Libre ]" : Patio[i][j]);
+                System.out.printf("%-22s", Patio[i][j] == null ? "[Libre ]" : Patio[i][j]);
             }
         }
     }
@@ -61,14 +64,15 @@ class almacenamiento {
         System.out.println("Inspeccion");
         for (int i = 0; i < Patio.length; i++) {
             for (int j = 0; j < Patio[i].length; j++) {
-                Contenedor c = Patio[i][j];
-                if (c != null && c.requiereInspeccion()) {
-                    inspeccion.add(c);
-                    System.out.println("Enviado a inspección: " + c);
-                }
+                Contenedor contenedor = Patio[i][j];
+                if (contenedor != null && contenedor.requiereInspeccion()) {
+                    inspeccion.add(contenedor);
+                    System.out.println("Enviado a inspección: " + contenedor);
                 }
             }
-        }System.out.println(" Cola tiene "+inspeccion.size()+" elementos");
+        }
+        System.out.println(" Cola tiene "+inspeccion.size()+" elementos");
+    }
 
     public Contenedor inspeccionarSiguiente() {
         if (inspeccion.isEmpty()) {
