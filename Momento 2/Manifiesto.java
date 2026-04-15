@@ -2,11 +2,13 @@ public class Manifiesto {
     private String ID;
     private double peso;
     private int Prioridad;
+    private boolean peligroso;
 
-    public Manifiesto(String ID, double peso, int Prioridad) {
+    public Manifiesto(String ID, double peso, int Prioridad, boolean peligroso) {
         this.ID = ID;
         this.peso = peso;
         this.Prioridad = Prioridad;
+        this.peligroso = peligroso;
     }
 
     public String getID() {
@@ -31,6 +33,14 @@ public class Manifiesto {
 
     public void setPrioridad(int prioridad) {
         Prioridad = prioridad;
+    }
+
+    public boolean isPeligroso() {
+        return peligroso;
+    }
+
+    public boolean requiereInspeccion() {
+        return peligroso || prioridad == 1;
     }
 
     @Override
