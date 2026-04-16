@@ -36,11 +36,11 @@ public class DataBay {
         System.out.println(" Estiba en el Buque (LIFO + BONO peso)");
  
         Carga[] cargaBuque = {
-            new Carga("B-001", 30.0, 3, false),  // base → más pesado
+            new Carga("B-001", 30.0, 3, false),  
             new Carga("B-002", 25.0, 2, false),
             new Carga("B-003", 20.0, 2, false),
             new Carga("B-004", 12.0, 1, false),
-            new Carga("B-005", 35.0, 3, false),  // ← debe ser RECHAZADO (35 > 12)
+            new Carga("B-005", 35.0, 3, false),  
         };
         System.out.println();
         for (Carga c : cargaBuque) puerto.apilarEnBuque(c);

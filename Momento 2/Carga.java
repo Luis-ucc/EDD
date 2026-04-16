@@ -34,6 +34,6 @@ class Carga {
     @Override
     public String toString() {
         return String.format("[%s | %.1f t | P%d%s]",
-                id, peso, prioridad, peligroso ? " ⚠" : "");
+                id, peso, prioridad, peligroso ? " !" : "");
     }
 }
