@@ -35,7 +35,7 @@ class Puerto {
             System.out.printf("  [%d] %s%n", i, manifiesto[i]);
             total += manifiesto[i].getPeso();
         }
-        System.out.printf("  Peso total: %.2f toneladas%n", total);
+        System.out.printf("  Peso total: " + total);
     }
 
     // MÓDULO 2 — PATIO DE ALMACENAMIENTO
@@ -97,7 +97,7 @@ class Puerto {
             double pesoTope = buque.peek().getPeso();
             if (c.getPeso() > pesoTope) {
                 System.out.printf(
-                        "   %s rechazado: %.1f t > tope %.1f t (inestable)%n",
+                        "    rechazado:  (inestable) ",
                         c, c.getPeso(), pesoTope);
                 return;
             }
