@@ -16,9 +16,9 @@ public class map {
     }
 
     public void Mostrar(){
-        for(Integer clave : mapa.keySet()) {
-            System.out.println(clave + " ->" + mapa.get(clave));
-        }
+        mapa.forEach((key, value) -> {
+            System.out.println("Codigo: " + key + " ->  producto: [" + value + "]");
+        });
     }
 
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class map {
         System.out.println(m.verificar(102));
 
         System.out.println(m.mapa.get(101));
-        
+
         m.Mostrar();
     }
 }

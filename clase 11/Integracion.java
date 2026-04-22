@@ -18,11 +18,11 @@ public class Integracion {
         System.out.println("Ana tiene " + pedidos.get("ana").size() + " pedidos.");
         System.out.println("Luis tiene " + pedidos.get("luis").size() + " pedidos.");
     }
-public void agregarPedido() {
+
+    public void agregarPedido() {
         pedidos.get("luis").add("Gorra");
         System.out.println("Luis tiene " + pedidos.get("luis").size() + " pedidos.");
     }
-
 
     public static void main(String[] args) {
         Integracion i = new Integracion();
