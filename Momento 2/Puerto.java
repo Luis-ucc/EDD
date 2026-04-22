@@ -6,7 +6,6 @@ import java.util.Stack;
 
 class Puerto {
 
-    // ── Estructuras de datos ─────────────────────────────────
     private Carga[] manifiesto;
     private Carga[][] patio;
     private Queue<Carga> inspeccion;
@@ -24,7 +23,7 @@ class Puerto {
     // MÓDULO 1 — REGISTRO DE MANIFIESTO
     public void registrarEnManifiesto(Carga c) {
         if (contadorManifiesto >= manifiesto.length)
-            throw new IllegalStateException("⚠ Manifiesto lleno. Capacidad: " + manifiesto.length);
+            throw new IllegalStateException(" Manifiesto lleno. Capacidad: " + manifiesto.length);
         manifiesto[contadorManifiesto++] = c;
         System.out.println("  ✔ Registrado: " + c);
     }
@@ -46,7 +45,7 @@ class Puerto {
             for (int j = 0; j < patio[i].length; j++) {
                 if (patio[i][j] == null) {
                     patio[i][j] = c;
-                    System.out.printf("  ✔ %s → Patio(%d,%d)%n", c, i, j);
+                    System.out.printf("   %s → Patio(%d,%d)%n", c, i, j);
                     return;
                 }
             }
@@ -74,7 +73,7 @@ class Puerto {
                 Carga c = patio[i][j];
                 if (c != null && c.requiereInspeccion()) {
                     inspeccion.add(c); // enqueue — O(1)
-                    System.out.println("  ✔ " + c + " → Cola de inspección");
+                    System.out.println("   " + c + "  Cola de inspección");
                 }
             }
         }
@@ -98,7 +97,7 @@ class Puerto {
             double pesoTope = buque.peek().getPeso();
             if (c.getPeso() > pesoTope) {
                 System.out.printf(
-                        "  ✘ %s rechazado: %.1f t > tope %.1f t (inestable)%n",
+                        "   %s rechazado: %.1f t > tope %.1f t (inestable)%n",
                         c, c.getPeso(), pesoTope);
                 return;
             }
