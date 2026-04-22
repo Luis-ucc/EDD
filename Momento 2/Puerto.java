@@ -25,7 +25,7 @@ class Puerto {
         if (contadorManifiesto >= manifiesto.length)
             throw new IllegalStateException(" Manifiesto lleno. Capacidad: " + manifiesto.length);
         manifiesto[contadorManifiesto++] = c;
-        System.out.println("  ✔ Registrado: " + c);
+        System.out.println("   Registrado: " + c);
     }
 
     public void mostrarResumenManifiesto() {

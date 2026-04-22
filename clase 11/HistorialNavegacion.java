@@ -18,7 +18,7 @@ class HistorialNavegacion {
 
     public void mostrar() {
         for(String url : historial) {
-            System.out.println(url);
+            System.out.println("\n" + url);
         }
     }
 

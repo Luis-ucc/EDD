@@ -20,7 +20,7 @@ public class Integracion {
     }
 
     public void agregarPedido() {
-        pedidos.get("luis").add("Gorra");
+        pedidos.get("luis").add("Sombrero");
         System.out.println("Luis tiene " + pedidos.get("luis").size() + " pedidos.");
     }
 
