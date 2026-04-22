@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class map {
     HashMap<Integer, String> mapa;
-
+                                        
     public map() {
         mapa = new HashMap<>();
         mapa.put(101, "Laptop");
