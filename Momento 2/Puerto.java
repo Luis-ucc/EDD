@@ -13,6 +13,7 @@ class Puerto {
 
     private int contadorManifiesto = 0;
 
+    //constructor de la clase
     public Puerto(int tamManifiesto, int filasPatio, int colPatio) {
         manifiesto = new Carga[tamManifiesto];
         patio = new Carga[filasPatio][colPatio];
@@ -50,7 +51,7 @@ class Puerto {
                 }
             }
         }
-        throw new RuntimeException(" ALERTA: Puerto Saturado. No hay espacio en el patio.");
+        throw new RuntimeException("No hay espacio.");
     }
 
     public void mostrarPatio() {

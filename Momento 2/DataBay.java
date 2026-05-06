@@ -8,10 +8,10 @@ public class DataBay {
         Carga[] llegada = {
             new Carga("C-001", 28.5, 1, false),  
             new Carga("C-002", 15.0, 2, true),   
-            new Carga("C-003", 30.0, 3, false),  
+            new Carga("C-003", 30.0, 1, false),  
             new Carga("C-004", 22.0, 2, false),
             new Carga("C-005", 10.0, 1, true),  
-            new Carga("C-006", 18.0, 3, false),
+            new Carga("C-006", 18.0, 2, false),
         };
         for (Carga c : llegada) puerto.registrarEnManifiesto(c);
         puerto.mostrarResumenManifiesto();
@@ -36,11 +36,11 @@ public class DataBay {
         System.out.println(" Estiba en el Buque (LIFO + BONO peso)");
  
         Carga[] cargaBuque = {
-            new Carga("B-001", 30.0, 3, false),  
+            new Carga("B-001", 30.0, 2, false),  
             new Carga("B-002", 25.0, 2, false),
             new Carga("B-003", 20.0, 2, false),
             new Carga("B-004", 12.0, 1, false),
-            new Carga("B-005", 35.0, 3, false),  
+            new Carga("B-005", 35.0, 1, false),  
         };
         System.out.println();
         for (Carga c : cargaBuque) puerto.apilarEnBuque(c);
