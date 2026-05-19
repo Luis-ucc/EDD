@@ -1,0 +1,3 @@
+20241001, Juan Perez, 3, juan@uni.edu, MAT101
+20241002, Maria Lopez, 2, maria@uni.edu, MAT102
+20241003, Carlos Gil, 4, carlos@uni.edu, MAT201
